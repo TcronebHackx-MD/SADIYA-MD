@@ -69,15 +69,13 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('SADIYA-MD connected to whatsapp ✅')
 
-let up = `SADIYA-MD connected successful ✅\nBOT OWNER=94742195461\nPREFIX: ${prefix}`;
+let up = `SADIYA-MD connected successful ✅\n\nPREFIX: ${prefix}`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` }, caption: up })
-}
-let qz = `SADIYA-MD Connect To Whstapp`
 
-await conn.sendMessage("94742195461@s.whatsapp.net", {image:{url: https://telegra.ph/file/900435c6d3157c98c3c88.jpg},caption:"qz"},{quoted:mek})
-}                                                           
+}
 })
+
 conn.ev.on('creds.update', saveCreds)  
 
 conn.ev.on('messages.upsert', async(mek) => {
