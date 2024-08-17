@@ -12,7 +12,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 if(!q) return reply("please give me url...")
 const search = await yts(q)
-const data = search.video[0]
+const data = search.videos[0]
 const url = data.url
 
 let desc = `*✨ SADIYA-MD SONG DOWNLOADER . .🌳*
@@ -38,11 +38,53 @@ let downloadUrl = down.dl_url
 
 //send audio
 await conn.sendMessage(from,{audio:{url: downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-
-
-    
-    
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"audio/mpeg",fileName:data.title + "mp3",caption:"MADE BY SADIYA-MD"},{quoted:mek})
 }catch(e){
 reply(`${e}`)
+}
+})
+
+//===========video-dl===========
+
+cmd({
+    pattern: "video",
+    desc: "download videos",
+    category: "download",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+if(!q) return reply("please give me url...")
+const search = await ytv(q)
+const data = search.videos[0]
+const url = data.url
+
+let desc = `*✨ SADIYA-MD VIDEO DOWNLOADER . .🌳*
+
+♦️ TITLE - ${data.title}
+
+♦️ VIEWS - ${data.views}
+
+♦️ DESCRIPTION - ${data.description}
+
+♦️ TIME - ${data.timestamp}
+
+♦️ AGO - ${data.ago}
+
+MADE BY SADIYA-MD
+`
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
+
+//download video
+
+let down = await fg.yta(url)  
+let downloadUrl = down.dl_url
+
+//send video
+await conn.sendMessage(from,{video:{url: downloadUrl},mimetype:"video/mp4"},{quoted:mek})
+await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"video/mp4",fileName:data.title + "mp4",caption:"MADE BY SADIYA-MD"},{quoted:mek})
+
+}catch(a){
+reply(`${a}`)
 }
 })
