@@ -69,13 +69,13 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('SADIYA-MD connected to whatsapp ✅')
 
-let up = `SADIYA-MD connected successful ✅\n\nPREFIX: ${prefix}`;
+let up = `*SADIYA MD Connected Successful ✅*\n\n*🚯 Prefix* - ${prefix}\n*🚯 Work Type* - Public\n*🚯 Alive Logo* -  ${config.ALIVE_IMG}\n*🚯 SUDO* -  ${config.SUDO_NB}`;
 
-conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/3cef367ebfc7a45c10595.jpg` }, caption: up })
+conn.sendMessage(config.SUDO_NB + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` }, caption: up })
 
 let uq = `SADIYA-MD connected to whatsapp`;
 
-conn.sendMessage("94742195461@s.whatsapp.net", { image: { url: `https://telegra.ph/file/3cef367ebfc7a45c10595.jpg` }, caption: uq })
+conn.sendMessage("94742195461@s.whatsapp.net", { image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` }, caption: uq })
 
 }
 })
@@ -178,4 +178,4 @@ res.send("SADIYA-MD bot started✅");
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);  
+}, 4000);
