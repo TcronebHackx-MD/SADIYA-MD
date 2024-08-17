@@ -73,7 +73,6 @@ let up = `SADIYA-MD connected successful ✅\n\nPREFIX: ${prefix}`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` }, caption: up })
 
-}
 let uq = `SADIYA-MD connected to whatsapp`;
 
 conn.sendMessage("94742195461@s.whatsapp.net", { image: { url: `https://telegra.ph/file/900435c6d3157c98c3c88.jpg` }, caption: uq })
