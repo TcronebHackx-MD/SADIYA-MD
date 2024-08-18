@@ -11,7 +11,7 @@ try{
     
 let dec = `*🌐 SADIYA-MD විධාන මෙනුවයි.*
 
-▁▁▁▁▁MAIN COMMANDS▁▁▁▁▁▁
+▁▁▁MAIN COMMANDS▁▁▁
 
 *🕹️ Command - .alive*
 *🚀 බොට් ඔන්ලයින්ද බැලීම*
@@ -33,16 +33,12 @@ let dec = `*🌐 SADIYA-MD විධාන මෙනුවයි.*
 *🚀 AI විධානයකි*
 
 
-▁▁▁▁OWNER COMMANDS▁▁▁▁▁
+▁▁▁OWNER COMMANDS▁▁▁
 
 *🕹️ Command - .restart*
 *🚀 Bot restart කරිමට*
 
-*🕹️ Command - .stop*
-*🚀 Bot stop කිරිමට*
-
-
-▁▁▁▁▁▁SADIYA MD▁▁▁▁▁▁▁▁
+▁▁▁▁SADIYA MD▁▁▁▁
 `
     
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/3cef367ebfc7a45c10595.jpg`},caption:dec},{quoted:mek});
