@@ -10,6 +10,7 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
+if(!isOwner) return reply("*❗ඔබ owner කෙනෙක් නොවේ")
 const {exec} = require("child_process")
 reply("*Stopping all functions and now bot is restarting...*")
 await sleep(1500)
